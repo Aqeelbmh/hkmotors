@@ -1492,4 +1492,201 @@ html {
 @keyframes slideUp { from { transform: translateY(20px); } to { transform: translateY(0); } }
 @keyframes scaleIn { from { transform: scale(0.95); } to { transform: scale(1); } }
 @keyframes float { from { transform: translateY(0); } to { transform: translateY(-10px); } }
-@keyframes spin { to { transform: rotate(360deg); } } 
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    body {
+        padding-top: 60px;
+    }
+
+    .navbar {
+        padding: 0.5rem 1rem;
+    }
+
+    .nav-container {
+        padding: 0.5rem;
+    }
+
+    .logo img {
+        max-height: 40px;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        padding: 1rem;
+        box-shadow: var(--shadow-md);
+        transform: translateY(-100%);
+        opacity: 0;
+        transition: all var(--transition-normal);
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 0.75rem;
+        font-size: 1rem;
+    }
+
+    .hero {
+        padding: 2rem 1rem;
+        min-height: auto;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        margin: 1rem 0;
+    }
+
+    .hero-features {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hero .feature {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .about-container {
+        padding: 2rem 1rem;
+    }
+
+    .about h2 {
+        font-size: 1.75rem;
+    }
+
+    .about-stats {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .about-features {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .brand-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .brand-card {
+        padding: 1.5rem;
+    }
+
+    .blog-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .blog-card {
+        margin-bottom: 1rem;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .contact-info {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+
+    .info-item {
+        margin-bottom: 1rem;
+    }
+
+    .info-item i {
+        font-size: 1.25rem;
+    }
+
+    .whatsapp-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .footer-links {
+        margin: 1rem 0;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .cta-button {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.9rem;
+    }
+
+    .about h2 {
+        font-size: 1.5rem;
+    }
+
+    .stat-number {
+        font-size: 1.75rem;
+    }
+
+    .stat-label {
+        font-size: 0.9rem;
+    }
+
+    .brand-card h3 {
+        font-size: 1.25rem;
+    }
+
+    .blog-content h3 {
+        font-size: 1.25rem;
+    }
+
+    .contact h2 {
+        font-size: 1.5rem;
+    }
+} 
